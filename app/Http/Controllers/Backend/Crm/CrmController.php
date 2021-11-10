@@ -73,7 +73,7 @@ class CrmController extends Controller
                     'mobile' => $value['Mobile'],
                     'website' => $value['Website'],
                     'twitter' => $value['Twitter'],
-                    'tag' => json_encode($value['Tag']),
+                    'tag' => null,
                     'fax' => $value['Fax'],
                     'street' => $value['Street'],
                     'zip_code' => $value['Zip_Code'],

@@ -26,6 +26,9 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         $schedule->call('\App\Http\Controllers\Auth\TokenGeneratorController@refreshToken')->everyMinute();
+        $schedule->call('\App\Http\Controllers\Backend\Crm\CrmController@getLeads')->everyMinute();
+        $schedule->call('\App\Http\Controllers\Backend\Crm\CrmController@getActivities')->everyMinute();
+        $schedule->call('\App\Http\Controllers\Backend\Crm\CrmController@getUsers')->everyMinute();
     }
 
     /**
